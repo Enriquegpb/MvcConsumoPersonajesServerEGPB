@@ -1,0 +1,18 @@
+﻿@model MvcConsumoPersonajesServerEGPB.Models.Personaje
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+@*<h1>Datos del Personaje: @Model.NombrePersonaje</h1>*@
+<ul class="list-group">
+    <li class="list-group-item"> Id: @Model.IdPersonaje</li>
+    <li class="list-group-item">Nombre: @Model.NombrePersonaje</li>
+    <li class="list-group-item"><img src="@Model.Imagen" style="width:150px; height:150px;" /></li>
+    <li class="list-group-item">Serie @Model.IdSerie</li>
+</ul>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index" class="btn btn-info">Volver</a>
+</div>
